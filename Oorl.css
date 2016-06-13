@@ -1,0 +1,126 @@
+body {
+    font-family: Roboto;
+    background-image: url('img/pattern.png');
+    background-repeat: repeat;
+    width: 770px;
+    max-height: 560px;
+    min-height: 55px;
+}
+
+table {
+    width: 100%;
+}
+
+input[type="text"] {
+    width: 100%;
+    border-radius: 2px;
+    border: 1px solid #046BFF;
+    outline: none;
+}
+
+img {
+    margin: 0 auto;        
+}
+
+button {
+    color: white;
+    font-size: 8pt;
+    height: 23px;
+    background-color: #2080F9;
+    width: 200px;
+    border-radius: 3px;
+    border-color: darkslategray;
+    border-style: solid;
+    border-width: 1px 2px 2px 1px;
+}
+
+a {
+    padding: 0 0 10px 15px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    text-decoration: none;
+    color: dimgray;
+    font-size: 8pt;
+}
+
+h3 {
+    margin-left: 5px;
+    margin-bottom: 7px;
+    text-overflow: ellipsis;
+}
+
+h4 {
+    margin-left: 5px;
+    margin-top: 7px;
+    margin-bottom: 10px;
+    text-overflow: ellipsis;
+}
+
+h5 {
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 7px;
+}
+
+div#controlContainer label {
+    font-size: 7pt;
+}
+
+#header {
+    border-bottom: 2px solid slategray;
+    border-radius: 5px;
+    margin-bottom: 8px;
+}
+
+#dialogBackground {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255,255,255,.85);
+    z-index: 1000;
+    display: none;
+}
+
+#dialogBackground #qrcodeDialog {
+    background-color: white;
+    box-sizing: border-box;
+    border-radius: 3px;
+    height: 565px;
+    width: 565px;
+    display: table;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 17px 50px 0 rgba(0,0,0,.19),0 12px 15px 0 rgba(0,0,0,.24);
+}
+
+#dialogBackground #qrcodeDialog #closeBtn {
+    color: darkslategray;
+    font-size: 16pt;
+    float: right;
+    margin: 2px 2px 2px 2px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+#dialogBackground #qrcodeDialog #qrcode {
+    padding-top: 25px;
+    margin: 0 auto;
+}
+
+#controlContainer {
+    border-top: 2px solid slategray;
+    border-radius: 5px;
+    float: right;
+    margin-top: 8px;
+    padding-top: 5px;
+    padding-bottom: 7px;
+}
+
+#cbc {
+    width: 25px;
+}
