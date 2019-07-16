@@ -1,0 +1,63 @@
+@charset "utf-8"
+
+@import "bulma/bulma.sass"
+@import "buefy/src/scss/buefy.scss"
+
+body
+  background-image: url('../public/assets/pattern.png')
+  background-repeat: repeat
+  width: 770px
+  max-height: 560px
+  min-height: 55px
+  padding: 8px 5px 6px 5px
+
+/* width */
+::-webkit-scrollbar
+  width: 8px
+
+/* Track */
+::-webkit-scrollbar-track
+  border-radius: 8px
+
+/* Handle */
+::-webkit-scrollbar-thumb
+  background: #118fe487
+  border-radius: 8px
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover
+  background: #118fe4
+
+.columns:not(:last-child),
+.level:not(:last-child)
+  margin-bottom: 0.5rem
+
+// #qrcode
+//   border: 6px solid white
+
+.clear-margin-right
+  margin-right: 0 !important
+
+.clear-margin-bottom
+  margin-bottom: 0 !important
+
+.clear-padding-bottom
+  padding-bottom: 0 !important
+
+.clear-border
+  border: 0 !important
+
+.clear-border-left
+  border-left: 0 !important
+
+.clear-border-right
+  border-right: 0 !important
+
+.clear-all-border-radius
+  border-radius: 0 !important
+
+.border-right-radius-only
+  border-radius: 0 3px 3px 0 !important
+
+.border-left-radius-only
+  border-radius: 3px 0 0 3px !important
