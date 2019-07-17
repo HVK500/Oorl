@@ -60,7 +60,7 @@ export default class ExtensionControls extends Vue {
     });
 
     setTimeout(() => {
-      (document.getElementById(id) as any).style.border = '6px solid white';
+      (document.getElementById(id) as HTMLDivElement).classList.add(id);
       // tslint:disable-next-line:no-unused-expression
       new QRCode(id, {
         height: 480,

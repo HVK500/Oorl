@@ -11,6 +11,14 @@ export interface TabProps {
   };
 }
 
+const formatTitle = (title: string): string => {
+  if (title.length >= 48) {
+    return `${title.substr(0, 45)}. . .`;
+  }
+
+  return title;
+};
+
 export const getUrlFromTabProps = (tabProps: TabProps): string => {
   const params = new URLSearchParams();
   tabProps.url.params.forEach(({ ignore, name, value }) => {
@@ -77,7 +85,7 @@ export const getCurrentTabProperties = async (): Promise<TabProps> => {
       logMetric(MetricPath.URL_HASH_LENGTH, hashValue.length + 1, !!hashValue);
 
       resolve({
-        title: tabs[0].title || '',
+        title: formatTitle(tabs[0].title || ''),
         url: {
           hash: hashValue,
           originPath: originPathValue,
