@@ -23,10 +23,7 @@ export const getUrlFromTabProps = (tabProps: TabProps): string => {
   const params = new URLSearchParams();
   tabProps.url.params.forEach(({ ignore, name, value }) => {
     if (ignore || !name) return;
-    params.append(
-      name.trim(),
-      encodeURIComponent(value.trim())
-    );
+    params.append(name.trim(), value.trim());
   });
 
   const paramString = params.toString() !== '' ? `?${params.toString()}` : '';
