@@ -49,25 +49,16 @@ export default class ExtensionControls extends Vue {
   }
 
   private onQrCode(): void {
-    const id = 'qrcode';
-    document.body.style.height = '560px';
-
     this.$modal.open({
-      content: `<div class="columns column is-centered is-vcentered clear-margin-bottom clear-margin-right"><div id="${id}"></div>`,
-      onCancel: () => { document.body.style.height = ''; },
-      scroll: 'clip',
-      width: 770
+      component: QrDisplay,
+      onCancel: QrDisplay.onCancel,
+      parent: this,
+      props: {
+        tabProps: this.tabProps
+      },
+      scroll: QrDisplay.SCROLL,
+      width: QrDisplay.WIDTH
     });
-
-    setTimeout(() => {
-      (document.getElementById(id) as HTMLDivElement).classList.add(id);
-      // tslint:disable-next-line:no-unused-expression
-      new QRCode(id, {
-        height: 480,
-        text: getUrlFromTabProps(this.tabProps),
-        width: 480
-      });
-    }, 100);
   }
 
   private onOpen() {
