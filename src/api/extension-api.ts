@@ -32,14 +32,10 @@ export const getUrlFromTabProps = (tabProps: TabProps): string => {
   return tabProps.url.originPath + paramString + hashString;
 };
 
-export const createGuid = (): string => {
-  const id = (): string => {
-    return Math.floor((Math.random() + 1) * 0x10000)
-      .toString(16)
-      .substring(1);
-  };
-
-  return `${id()}${id()}-${id()}-${id()}-${id()}-${id()}${id()}`;
+export const createIdentifier = (): string => {
+  return Math.floor((Math.random() + 1) * 0x10000)
+    .toString(16)
+    .substring(1);
 };
 
 export const getCurrentTabProperties = async (): Promise<TabProps> => {
@@ -52,7 +48,7 @@ export const getCurrentTabProperties = async (): Promise<TabProps> => {
       const params: ParameterMap = new Map();
 
       url.searchParams.forEach((value, name) => {
-        params.set(createGuid(), {
+        params.set(createIdentifier(), {
           ignore: false,
           name: name,
           value: decodeURIComponent(value)
@@ -61,7 +57,7 @@ export const getCurrentTabProperties = async (): Promise<TabProps> => {
 
       logMetric(MetricPath.NUMBER_OF_PARAMETERS, params.size, params.size > 0);
 
-      params.set(createGuid(), {
+      params.set(createIdentifier(), {
         ignore: true,
         last: true,
         name: '',

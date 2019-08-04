@@ -15,9 +15,9 @@
 </template>
 
 <script lang="ts">
-import { Component, Emit, Ref, Vue } from 'vue-property-decorator';
-import { Getter, Mutation } from 'vuex-class';
-import { createGuid } from '../api/extension-api';
+import { Component, Ref, Vue } from 'vue-property-decorator';
+import { Getter } from 'vuex-class';
+import { createIdentifier } from '../api/extension-api';
 import { FutureMetricPath, MetricPath } from '../api/metric-paths';
 import { logMetric } from '../api/metrics-api';
 import { ParameterMap, ParameterProps, ParameterState, StateProps } from '../store/types/root-state';
@@ -47,7 +47,7 @@ export default class ParameterEditor extends Vue {
   }
 
   private addField(): void {
-    const id = createGuid();
+    const id = createIdentifier();
     const bool = true;
     const empty = '';
 
