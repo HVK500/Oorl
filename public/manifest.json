@@ -1,0 +1,17 @@
+{
+  "manifest_version": 2,
+  "name": "Oorl",
+  "description": "A tool to manipulate the current tab's URL query parameters.",
+  "version": "1.2",
+  "icons": {
+    "16": "assets/icon16.png",
+    "48": "assets/icon48.png",
+    "128": "assets/icon128.png"
+  },
+  "permissions": [
+    "tabs"
+  ],
+  "browser_action": {
+    "default_popup": "index.html"
+  }
+}
