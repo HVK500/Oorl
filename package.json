@@ -14,7 +14,7 @@
   },
   "dependencies": {
     "@types/chrome": "^0.0.86",
-    "axios": "^0.19.0",
+    "axios": "^0.21.1",
     "buefy": "^0.7.4",
     "core-js": "^2.6.5",
     "pug": "^2.0.4",
